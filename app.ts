@@ -1,3 +1,8 @@
-import { createUser } from "./controllers/users.controller";
+import express, { Express } from 'express'
+import { router } from './routers/mainRouter'
+const app: Express = express()
 
-createUser({ id: 4, name: "Abhilas", age: 20, isStudent: true });
+app.use(express.json())
+app.use('/user', router)
+
+export { app }

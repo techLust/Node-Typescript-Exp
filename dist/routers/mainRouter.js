@@ -3,10 +3,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.app = void 0;
+exports.router = void 0;
 const express_1 = __importDefault(require("express"));
-const mainRouter_1 = require("./routers/mainRouter");
-const app = (0, express_1.default)();
-exports.app = app;
-app.use(express_1.default.json());
-app.use('/user', mainRouter_1.router);
+const users_controller_db_1 = require("../controllers/users.controller.db");
+const router = express_1.default.Router();
+exports.router = router;
+router.post('/', users_controller_db_1.createUser);
