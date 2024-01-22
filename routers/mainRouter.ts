@@ -1,7 +1,11 @@
 import expres from 'express'
-import { createUser } from '../controllers/users.controller.db'
+import { createUser, deleteUser, getUser, updateUser } from '../controllers/users.controller.db'
+import { checkUserExist } from '../middlewares/checkExistingUser'
 const router = expres.Router()
 
-router.post('/', createUser)
+router.post('/', checkUserExist, createUser)
+router.get('/', getUser)
+router.put('/:id', updateUser)
+router.delete('/:id', deleteUser)
 
-export { router }
+export { router } 

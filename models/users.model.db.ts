@@ -1,4 +1,5 @@
-import mongoose, { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
+import { User } from "../interfaces/interface";
 
 const userSchema = new Schema({
     name: {
@@ -6,6 +7,9 @@ const userSchema = new Schema({
     },
     age: {
         type: Number,
+    },
+    email: {
+        type: String,
     },
     isStudent: {
         type: Boolean
@@ -16,4 +20,4 @@ const userSchema = new Schema({
     }
 )
 
-export const userModel = model('Users', userSchema)
+export const userModel = model<User>('Users', userSchema)

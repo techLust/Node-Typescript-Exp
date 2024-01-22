@@ -1,4 +1,4 @@
-import { User } from "../models/users.model.file"
+import { User } from "../interfaces/interface"
 
 export type Color = 'red' | 'blue' | 'green'
 export type DbRes = User | User[]

@@ -9,6 +9,9 @@ const userSchema = new mongoose_1.Schema({
     age: {
         type: Number,
     },
+    email: {
+        type: String,
+    },
     isStudent: {
         type: Boolean
     }

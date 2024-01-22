@@ -1,4 +1,4 @@
-import { User } from "../models/users.model.file";
+import { User } from "../interfaces/interface";
 import { createJsonFile, file } from "../helpers/manageFile";
 
 export const createUser = (data: User) => {

@@ -1,5 +1,5 @@
 import * as fs from "fs";
-import { User } from "../models/users.model.file";
+import { User } from "../interfaces/interface";
 
 const fileName: string = './userDB.json'
 
